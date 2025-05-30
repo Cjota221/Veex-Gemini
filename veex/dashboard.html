@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEEX - Dashboard</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header id="app-header"></header>
+
+        <aside id="app-sidebar"></aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Resumo geral do seu negócio.</p>
+                </div>
+
+                <section class="kpi-section dashboard-grid">
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <h3 class="card-label">Lucro Total (Mês)</h3>
+                            <p class="card-metric" id="kpi-lucro">R$ 0,00</p>
+                        </div>
+                    </div>
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <h3 class="card-label">Produção (Pares/Mês)</h3>
+                            <p class="card-metric" id="kpi-producao">0</p>
+                        </div>
+                    </div>
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <h3 class="card-label">Saldo Atual</h3>
+                            <p class="card-metric" id="kpi-saldo">R$ 0,00</p>
+                        </div>
+                    </div>
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <h3 class="card-label">Pares Vendidos (Mês)</h3>
+                            <p class="card-metric" id="kpi-pares-vendidos">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="summary-section dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Resumo de Custos por Modelo</h2>
+                        </div>
+                        <div class="card-body" id="resumo-custos-modelos">
+                            <p>Nenhum modelo para exibir ainda.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Desempenho de Vendas (Últimos 30 dias)</h2>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="vendasChart" width="400" height="200"></canvas>
+                            <p class="text-center">Gráfico de vendas aqui.</p>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Alertas de Estoque Baixo</h2>
+                        </div>
+                        <div class="card-body" id="alertas-estoque">
+                            <p>Nenhum alerta de estoque no momento.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/dashboard.js"></script>
+    </body>
+</html>
