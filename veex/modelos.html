@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEEX - Modelos</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header id="app-header"></header>
+        <aside id="app-sidebar"></aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Gerenciamento de Modelos</h1>
+                    <button class="btn btn-primary" id="btnNovoModelo">
+                        <img src="assets/icons/plus.svg" alt="" class="icon"> Novo Modelo
+                    </button>
+                </div>
+
+                <div class="dashboard-grid" id="listaModelos">
+                    </div>
+
+                <div id="modalModelo" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 id="modalModeloTitulo">Novo Modelo</h2>
+                            <span class="close-button" id="closeModalModelo">&times;</span>
+                        </div>
+                        <form id="formModelo">
+                            <input type="hidden" id="modeloId">
+                            <div class="form-group">
+                                <label for="modeloNome">Nome do Modelo:</label>
+                                <input type="text" id="modeloNome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="modeloReferencia">Referência:</label>
+                                <input type="text" id="modeloReferencia">
+                            </div>
+                            <div class="form-group">
+                                <label for="modeloImagem">URL da Imagem:</label>
+                                <input type="text" id="modeloImagem" placeholder="https://link.para/imagem.jpg">
+                                </div>
+                            <div class="form-group">
+                                <label>Ficha Técnica (Insumos):</label>
+                                <div id="insumosModeloContainer">
+                                    </div>
+                                <button type="button" class="btn btn-secondary btn-sm" id="btnAddInsumoModelo">Adicionar Insumo</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="modeloMargemLucro">Margem de Lucro (%):</label>
+                                <input type="number" id="modeloMargemLucro" value="30" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <p>Custo Estimado: <span id="modeloCustoEstimado">R$ 0,00</span></p>
+                                <p>Preço de Venda Sugerido: <span id="modeloPrecoSugerido">R$ 0,00</span></p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Modelo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/modelos.js"></script>
+</body>
+</html>
