@@ -1,0 +1,55 @@
+/* animations.css */
+
+/* Animação de fade-in para cards ou elementos da página */
+.fade-in {
+    animation: fadeInAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para botões ao passar o mouse (leve scale) */
+.btn {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação para modais */
+.modal {
+    /* display: none; é definido em components.css, JS controla a visibilidade */
+    animation: fadeInModalBackground 0.3s ease-out forwards;
+}
+
+.modal-content {
+    animation: slideInModalContent 0.4s ease-out forwards;
+}
+
+@keyframes fadeInModalBackground {
+    from { background-color: rgba(0,0,0,0); }
+    to { background-color: rgba(0,0,0,0.6); }
+}
+
+@keyframes slideInModalContent {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animação para o estado ativo do menu lateral */
+#app-sidebar a.active {
+    /* Estilo já em layout.css, mas pode ter transição aqui */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-left: 3px solid var(--primary-color); /* Exemplo de destaque extra */
+    padding-left: 17px; /* Ajuste por causa da borda */
+}
