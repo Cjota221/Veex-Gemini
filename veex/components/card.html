@@ -1,0 +1,17 @@
+<div class="card modelo-card" data-id="{modeloId}">
+    <img src="{modeloImagemUrl}" alt="{modeloNome}" class="modelo-imagem">
+    <div class="card-body">
+        <h3 class="card-title">{modeloNome}</h3>
+        <p>Ref: {modeloReferencia}</p>
+        <p>Custo Total: R$ {modeloCusto}</p>
+        <p>Preço Sugerido ({modeloMargem}%): R$ {modeloPreco}</p>
+    </div>
+    <div class="card-actions">
+        <button class="btn btn-secondary btn-sm btn-edit" data-id="{modeloId}">
+            <img src="assets/icons/edit.svg" alt="Editar" class="icon"> Editar
+        </button>
+        <button class="btn btn-danger btn-sm btn-delete" data-id="{modeloId}">
+            <img src="assets/icons/delete.svg" alt="Excluir" class="icon"> Excluir
+        </button>
+    </div>
+</div>
