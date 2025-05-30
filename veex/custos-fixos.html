@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEEX - Custos Fixos</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header id="app-header"></header>
+        <aside id="app-sidebar"></aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Gerenciamento de Custos Fixos Mensais</h1>
+                    <button class="btn btn-primary" id="btnNovoCustoFixo">
+                         <img src="assets/icons/plus.svg" alt="" class="icon"> Novo Custo Fixo
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Resumo dos Custos Fixos</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Total Mensal: <strong id="totalCustosFixos">R$ 0,00</strong></p>
+                        <div class="form-group">
+                            <label for="producaoMensalPrevista">Produção Mensal Prevista (pares):</label>
+                            <input type="number" id="producaoMensalPrevista" value="100" min="1">
+                        </div>
+                        <p>Custo Fixo Diluído por Par: <strong id="custoFixoPorPar">R$ 0,00</strong></p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="tabelaCustosFixos">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th>Valor Mensal (R$)</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="modalCustoFixo" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 id="modalCustoFixoTitulo">Novo Custo Fixo</h2>
+                            <span class="close-button" id="closeModalCustoFixo">&times;</span>
+                        </div>
+                        <form id="formCustoFixo">
+                            <input type="hidden" id="custoFixoId">
+                            <div class="form-group">
+                                <label for="custoFixoDescricao">Descrição:</label>
+                                <input type="text" id="custoFixoDescricao" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="custoFixoValor">Valor Mensal (R$):</label>
+                                <input type="number" id="custoFixoValor" step="0.01" min="0" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Custo Fixo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/custos-fixos.js"></script>
+</body>
+</html>
