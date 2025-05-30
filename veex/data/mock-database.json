@@ -1,0 +1,85 @@
+{
+    "config": {
+        "appName": "VEEX",
+        "currentUser": "Usuário Padrão",
+        "producaoMensalPrevista": 100
+    },
+    "modelos": [
+        {
+            "id": "mod1",
+            "nome": "Sandália Confort",
+            "referencia": "SC001",
+            "imagemUrl": "assets/images/modelo-placeholder.png",
+            "insumos": [
+                { "insumoId": "ins1", "quantidade": 0.5 },
+                { "insumoId": "ins2", "quantidade": 2 }
+            ],
+            "margemLucro": 50
+        },
+        {
+            "id": "mod2",
+            "nome": "Sapato Executivo",
+            "referencia": "SE002",
+            "imagemUrl": "assets/images/modelo-placeholder.png",
+            "insumos": [
+                { "insumoId": "ins1", "quantidade": 0.8 },
+                { "insumoId": "ins3", "quantidade": 1 }
+            ],
+            "margemLucro": 60
+        }
+    ],
+    "insumos": [
+        {
+            "id": "ins1",
+            "nome": "Couro Legítimo",
+            "unidade": "m²",
+            "preco": 85.00,
+            "estoqueAtual": 50,
+            "estoqueMinimo": 10,
+            "rendimento": 1.2 
+        },
+        {
+            "id": "ins2",
+            "nome": "Solado Borracha TR",
+            "unidade": "Par",
+            "preco": 12.50,
+            "estoqueAtual": 200,
+            "estoqueMinimo": 50,
+            "rendimento": 1
+        },
+        {
+            "id": "ins3",
+            "nome": "Forro Espumado",
+            "unidade": "Metro Linear",
+            "preco": 22.00,
+            "estoqueAtual": 80,
+            "estoqueMinimo": 15,
+            "rendimento": 0.5
+        }
+    ],
+    "custosFixos": [
+        { "id": "cf1", "descricao": "Aluguel do Espaço", "valor": 1200.00 },
+        { "id": "cf2", "descricao": "Energia Elétrica", "valor": 350.00 },
+        { "id": "cf3", "descricao": "Internet", "valor": 120.00 }
+    ],
+    "custosVariaveis": [
+        { "id": "cv1", "descricao": "Embalagem Individual", "valor": 1.50, "obs": "Caixa + Papel Seda" },
+        { "id": "cv2", "descricao": "Taxa de Cartão (média)", "valor": 0.80, "obs": "2.5% sobre preço médio de R$32" }
+    ],
+    "financeiro": [
+        { "id": "fin1", "data": "2025-05-01", "descricao": "Venda Modelo X", "tipo": "receita", "valor": 150.00 },
+        { "id": "fin2", "data": "2025-05-02", "descricao": "Compra de Couro", "tipo": "despesa", "valor": 850.00 }
+    ],
+    "historicoProducao": [
+        { 
+            "id": "hp1", 
+            "data": "2025-05-10", 
+            "modeloId": "mod1", 
+            "modeloNome": "Sandália Confort", 
+            "referencia": "SC001",
+            "quantidade": 10, 
+            "custoTotal": 250.75, 
+            "observacoes": "Lote de teste" 
+        }
+    ]
+}
