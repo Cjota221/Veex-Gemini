@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEEX - Insumos</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header id="app-header"></header>
+        <aside id="app-sidebar"></aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Gerenciamento de Insumos</h1>
+                    <button class="btn btn-primary" id="btnNovoInsumo">
+                        <img src="assets/icons/plus.svg" alt="" class="icon"> Novo Insumo
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table id="tabelaInsumos">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Unidade</th>
+                                <th>Preço (R$)</th>
+                                <th>Estoque Atual</th>
+                                <th>Estoque Mínimo</th>
+                                <th>Rendimento (por unidade de produto)</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="modalInsumo" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 id="modalInsumoTitulo">Novo Insumo</h2>
+                            <span class="close-button" id="closeModalInsumo">&times;</span>
+                        </div>
+                        <form id="formInsumo">
+                            <input type="hidden" id="insumoId">
+                            <div class="form-group">
+                                <label for="insumoNome">Nome do Insumo:</label>
+                                <input type="text" id="insumoNome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insumoUnidade">Unidade de Medida:</label>
+                                <input type="text" id="insumoUnidade" placeholder="Ex: Metro, Kg, Unidade" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insumoPreco">Preço por Unidade (R$):</label>
+                                <input type="number" id="insumoPreco" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insumoEstoqueAtual">Estoque Atual:</label>
+                                <input type="number" id="insumoEstoqueAtual" step="any" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insumoEstoqueMinimo">Estoque Mínimo (Alerta):</label>
+                                <input type="number" id="insumoEstoqueMinimo" step="any" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="insumoRendimento">Rendimento (opcional):</label>
+                                <input type="number" id="insumoRendimento" step="any" min="0" placeholder="Ex: 0.8 (se 1 unidade do insumo faz 0.8 produto)">
+                                <small>Quantas unidades de produto final 1 unidade deste insumo consegue produzir, ou quanto deste insumo é usado por produto.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Insumo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/insumos.js"></script>
+</body>
+</html>
