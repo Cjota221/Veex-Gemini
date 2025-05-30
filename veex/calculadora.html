@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEEX - Calculadora de Preço</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header id="app-header"></header>
+        <aside id="app-sidebar"></aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Calculadora de Preço de Venda</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <form id="formCalculadora">
+                            <div class="form-group">
+                                <label for="calcModeloSelecionado">Selecionar Modelo (Opcional):</label>
+                                <select id="calcModeloSelecionado">
+                                    <option value="">Calcular custo manualmente</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="calcCustoTotalProduto">Custo Total do Produto (R$):</label>
+                                <input type="number" id="calcCustoTotalProduto" step="0.01" min="0" required>
+                                <small>Inclui custo de insumos, custo fixo diluído e custos variáveis.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="calcMargemLucro">Margem de Lucro Desejada (%):</label>
+                                <input type="number" id="calcMargemLucro" value="30" step="1" min="0" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="btnCalcularPreco">Calcular Preço</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card" id="resultadoCalculadora" style="display: none;">
+                    <div class="card-header">
+                        <h2 class="card-title">Resultado da Precificação</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Custo Total do Produto: <strong id="resCustoTotal">R$ 0,00</strong></p>
+                        <p>Margem de Lucro Aplicada: <strong id="resMargemAplicada">0%</strong></p>
+                        <p>Valor do Lucro por Unidade: <strong id="resLucroUnitario">R$ 0,00</strong></p>
+                        <p>Preço de Venda Sugerido: <strong id="resPrecoSugerido">R$ 0,00</strong></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/calculadora.js"></script>
+</body>
+</html>
