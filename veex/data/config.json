@@ -1,0 +1,10 @@
+{
+    "appName": "VEEX",
+    "version": "1.0.0",
+    "apiEndpoint": null,
+    "defaultCurrency": "BRL",
+    "defaultMargemLucro": 30,
+    "alertasEstoqueMinimoAtivos": true,
+    "theme": "default",
+    "itemsPerPage": 10
+}
